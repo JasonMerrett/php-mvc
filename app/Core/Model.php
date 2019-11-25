@@ -4,7 +4,7 @@ namespace App\Core;
 
 abstract class Model {
     protected $attributes = [];
-
+    
     public function __construct($attributes = []) {
         $this->populate($attributes);
     }

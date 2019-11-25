@@ -1,0 +1,14 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+    <div class="container">
+        <a class="btn btn-success mb-3" href="/contacts/create">Create Contact</a>
+        {% for contact in contacts %}
+            <div class="px-4 py-2 bg-white shadow-sm mb-2 rounded">
+                <h2>{{ contact.email }}</h2>
+                <h3>{{ contact.subject }}</h3>
+                <p>{{ contact.body }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

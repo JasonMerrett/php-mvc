@@ -1,0 +1,21 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+    <div class="container">
+        <form action="/contacts" method="POST">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" class="form-control" id="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" name="subject" class="form-control" id="subject" placeholder="Enter a subject">
+            </div>
+            <div class="form-group">
+                <label for="body">Body</label>
+                <textarea class="form-control" name="body" id="body" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+{% endblock %}

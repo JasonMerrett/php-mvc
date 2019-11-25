@@ -6,6 +6,8 @@ require_once 'helpers.php';
 
 SimpleRouter::setDefaultNamespace('App\Controllers');
 
-SimpleRouter::post('/test', 'ContactController@test');
+SimpleRouter::get('/contacts', 'ContactController@index');
+SimpleRouter::get('/contacts/create', 'ContactController@create');
+SimpleRouter::post('/contacts', 'ContactController@store');
 
 SimpleRouter::start();
