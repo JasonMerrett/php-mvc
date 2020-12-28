@@ -1,5 +1,5 @@
 {
-    "name": "php-mvc",
+    "name": "jasonmerrett/php-mvc",
     "description": "Simple MVC framework for PHP",
     "require": {
         "twig/twig": "^3.0",

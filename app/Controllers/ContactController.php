@@ -9,13 +9,13 @@ class ContactController {
     public function index() {
         $contacts = (new Contact)->all();
 
-        return (new View)->render('contacts/index.html', [
+        return View::render('contacts/index.html', [
             'contacts' => $contacts
         ]);
     }
 
     public function create() {
-        return (new View)->render('contacts/create.html');
+        return View::render('contacts/create.html');
     }
 
     public function store()
