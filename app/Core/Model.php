@@ -2,7 +2,7 @@
 
 namespace App\Core;
 
-abstract class Model {
+class Model {
     protected $attributes = [];
     
     public function __construct($attributes = []) {

@@ -7,7 +7,7 @@ use App\Core\View;
 
 class ContactController {
     public function index() {
-        $contacts = (new Contact)->all();
+        $contacts = Contact::all();
 
         return View::render('contacts/index.html', [
             'contacts' => $contacts

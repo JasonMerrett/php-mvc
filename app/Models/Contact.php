@@ -22,7 +22,7 @@ class Contact extends Model {
         return $this;
     }
 
-    public function all()
+    public static function all()
     {
         $pdo = new \PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASS'));
         $stmt = $pdo->prepare('SELECT * FROM contacts');
