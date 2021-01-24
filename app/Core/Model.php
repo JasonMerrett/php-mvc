@@ -26,6 +26,15 @@ class Model {
         }
     }
 
+    public function __isset($key)
+    {
+        if (isset($this->attributes[$key])) {
+            return true;
+        }
+
+        return false;
+    }
+
     public function __set($key, $value)
     {
         $this->attributes[$key] = $value;

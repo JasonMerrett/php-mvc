@@ -11,7 +11,8 @@ class View {
     public static function render($layout, $data = [])
     {
         $loader = new FilesystemLoader(self::$location);
-        $twig = new Environment($loader);
+        $twig = new Environment($loader, [getenv('ENV') === 'development' ? true : false]);
+        $twig->addExtension(new \Twig\Extension\DebugExtension());
 
         return $twig->render($layout, $data);
     }
