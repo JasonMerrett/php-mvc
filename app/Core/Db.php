@@ -2,12 +2,14 @@
 
 namespace App\Core;
 
+use PDO;
+
 class Db {
     private static $instance = null;
     private $conn;
 
     private function __construct() {
-        $this->conn = new \PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASS'));
+        $this->conn = new PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASS'));
     }
 
     public static function instance() {
